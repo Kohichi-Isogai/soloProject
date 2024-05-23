@@ -43,4 +43,15 @@
 
 #friendImg {
   height: 100px;
+  transform: scale(-1, 1);
+}
+
+#enemyImg {
+  height: 100px;
+  transform: scale(-1, 1);
+}
+
+#vs {
+  color: red;
+  font-size: 50px;
 }

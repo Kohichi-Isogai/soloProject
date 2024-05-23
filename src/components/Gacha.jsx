@@ -1,6 +1,5 @@
 const Gacha = (props) => {
-  const { setFriend, setFriendView } = props;
-  console.log(props);
+  const { setFriend } = props;
   return (
     <button
       onClick={async () => {
@@ -9,10 +8,6 @@ const Gacha = (props) => {
         });
         const friendData = await friend.json();
         setFriend(friendData);
-        console.log(friend.ok);
-        setFriendView(friend.ok);
-
-        // console.log("返り値 ok : ", friend.ok);
       }}
     >
       ガチャを引く！

@@ -13,6 +13,12 @@ app.listen(8000, () => {
 
 app.get("/gacha", async (req, res) => {
   const result = await knex("friend").select();
-  console.log("server ok : ", result[0]);
-  res.status(200).send(JSON.stringify(result[Math.floor(Math.random() * 3)]));
+  const randomNum = Math.floor(Math.sqrt(Math.random() * 9));
+  res.status(200).send(JSON.stringify(result[2 - randomNum]));
+});
+
+app.get("/battles", async (req, res) => {
+  const result = await knex("enemy").select();
+  const randomNum = Math.floor(Math.sqrt(Math.random() * 9));
+  res.status(200).send(JSON.stringify(result[2 - randomNum]));
 });
