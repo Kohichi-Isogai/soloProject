@@ -2,6 +2,7 @@
   "name": "vite-project",
   "private": true,
   "description": "",
+  "main": "server.js",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -12,7 +13,7 @@
     "latestMigration": "knex migrate:latest",
     "makeSeed": "knex seed:make",
     "runSeed": "knex seed:run",
-    "server": "nodemon index.js"
+    "server": "nodemon server.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
