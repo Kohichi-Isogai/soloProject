@@ -8,6 +8,7 @@ exports.up = function (knex) {
     table.string("name").unique();
     table.integer("attack");
     table.integer("hp");
+    table.text("url");
   });
 };
 
