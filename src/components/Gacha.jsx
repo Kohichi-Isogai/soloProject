@@ -3,11 +3,17 @@ const Gacha = (props) => {
   return (
     <button
       onClick={async () => {
-        const friend = await fetch("/gacha", {
+        console.log("---1");
+        const friend = await fetch("/api/gacha", {
           method: "GET",
         });
+        console.log("---2");
+
+        console.log("friend : ", friend);
         const friendData = await friend.json();
+        console.log("---3");
         setFriend(friendData);
+        console.log("---4");
       }}
     >
       ガチャを引く！

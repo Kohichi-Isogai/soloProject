@@ -13,6 +13,10 @@ function App() {
     console.log("enemy : ", enemy.id);
   }, [friend, enemy]);
 
+  // useEffect(() =>{
+
+  // })
+
   return (
     <>
       <div>
@@ -22,6 +26,7 @@ function App() {
       </div>
       <div>
         <Gacha setFriend={setFriend}></Gacha>
+        <br />
         <Battle setEnemy={setEnemy}></Battle>
       </div>
     </>

@@ -3,7 +3,7 @@ const Battle = (props) => {
   return (
     <button
       onClick={async () => {
-        const result = await fetch("/battles", {
+        const result = await fetch("/api/battles", {
           method: "GET",
         });
         const enemy = await result.json();
