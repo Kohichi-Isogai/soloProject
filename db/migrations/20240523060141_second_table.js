@@ -6,6 +6,7 @@ exports.up = function (knex) {
   return knex.schema.createTable("my_friend", (table) => {
     table.increments("id").primary();
     table.string("user").unique();
+    table.integer("max_battle");
     table.integer("friend_id").references("friend.id");
   });
 };

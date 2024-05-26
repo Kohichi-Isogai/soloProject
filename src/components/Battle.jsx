@@ -10,6 +10,14 @@ const Battle = (props) => {
         });
         const enemy = await result.json();
         setEnemy(enemy);
+        let url =
+          enemy.id === 1
+            ? "src/img/grasslands.jpg"
+            : enemy.id === 2
+            ? "src/img/cave.jpg"
+            : "src/img/castle.jpg";
+        document.getElementById("base").style.backgroundImage = `url("${url}")`;
+
         console.log("in");
       }}
       disabled={disabled}

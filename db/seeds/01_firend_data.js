@@ -9,7 +9,7 @@ exports.seed = async function (knex) {
     {
       id: 1,
       name: "friend1",
-      attack: 3,
+      attack: 4,
       hp: 15,
       url: "https://blogger.googleusercontent.com/img/a/AVvXsEjyeJgJIrzCF5Ck3iDJAS25qLd7P02PixI-UWNgtSyq5YHPa9v5ngQgeJIjoRypNDVpQrAyKh3I4EZnFXMAgQIrsDfF5dCTNY_VPrOmkNWO18doT6xehVo70halIYqycSTnfxjffLXgcrGmRu-F4KweGragY9pRkKtvB40s7FrvuI4sUD0XRRkqh0pltw=s805",
     },
@@ -17,7 +17,7 @@ exports.seed = async function (knex) {
       id: 2,
       name: "friend2",
       attack: 6,
-      hp: 10,
+      hp: 12,
       url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9b1voNd6MN-QGgnE5Ed6rDRpCAG5LfYInQ1XtyBUnLLLrOOZx1xMldnka1dxhlR3SaL7uIXMhWM2OCvKXpcmAf5aWHNZFSW-cmeEewFl5lbxeHbLZJNxOFypMQr_ODdYEQFjaisVYDT9p/s800/mahoutsukai_woman.png",
     },
     {

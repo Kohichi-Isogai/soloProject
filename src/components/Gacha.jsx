@@ -1,5 +1,5 @@
 const Gacha = (props) => {
-  const { setFriend, setDisabled } = props;
+  const { disabled, setFriend, setDisabled, setEnemy, initEnemy } = props;
   return (
     <button
       onClick={async () => {
@@ -8,9 +8,12 @@ const Gacha = (props) => {
         });
         const friendData = await friend.json();
         setFriend(friendData);
-
+        setEnemy(initEnemy);
         setDisabled(false);
+        document.getElementById("friendHP").style.backgroundColor =
+          "chartreuse";
       }}
+      disabled={disabled}
     >
       ガチャを引く！
     </button>

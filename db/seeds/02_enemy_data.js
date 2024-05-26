@@ -17,7 +17,7 @@ exports.seed = async function (knex) {
       id: 2,
       name: "enemy2",
       attack: 5,
-      hp: 8,
+      hp: 9,
       url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgY8f3qQzm8dg9bhDi4oeL1Z9wgU1DNYGYZW67MEsnoQrC9W4xqghwa0T19ULsvheFNkuy7-9dRx97jCTW916iK2jkB1_lGpp2GtLHgLasu3PVdWNer6RBAOWixmnOMA7E4C8itZfZ5P9ix/s800/fantasy_kerberos.png",
     },
     {

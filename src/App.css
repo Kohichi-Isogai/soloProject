@@ -2,17 +2,21 @@
   max-width: 1280px;
   height: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0%;
   text-align: center;
 }
 
 html {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   height: 100%;
+  /* margin: 0; */
   margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -51,25 +55,18 @@ body {
   color: #888;
 }
 
-#friendImg {
-  height: 100px;
-  transform: scale(-1, 1);
-}
-
-#enemyImg {
-  height: 100px;
-  transform: scale(-1, 1);
-}
-
-#vs {
-  color: red;
-  font-size: 50px;
-}
-
 #base {
   width: 550px;
-  height: 90%;
+  height: 100%;
   border: 2px solid #000;
-  margin-top: 5%;
-  background-image: url(src/img/023yado4.jpg);
+  background-image: url(src/img/bar.jpg);
+}
+/* 
+#battleLogBox1 {
+  height: 50%;
+} */
+
+#battle {
+  width: 550px;
+  height: 100%;
 }

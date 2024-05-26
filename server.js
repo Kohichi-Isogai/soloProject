@@ -22,3 +22,8 @@ app.get("/api/battles", async (req, res) => {
   const randomNum = Math.floor(Math.sqrt(Math.random() * 9));
   res.status(200).send(JSON.stringify(result[2 - randomNum]));
 });
+
+app.get("/api/friends", async (req, res) => {
+  const result = await knex("my_friend").select();
+  res.status(200).send(JSON.stringify(result));
+});

@@ -1,0 +1,18 @@
+#tab {
+  /* margin: auto auto 0; */
+  position: absolute;
+  bottom: 0;
+  /* top: 80%; */
+  background-color: gainsboro;
+  width: 550px;
+}
+
+#tab1 {
+  width: 30%;
+}
+#tab2 {
+  width: 40%;
+}
+#tab3 {
+  width: 30%;
+}

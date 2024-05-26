@@ -1,0 +1,28 @@
+#friendImg {
+  height: 200px;
+  transform: scale(-1, 1);
+}
+
+#enemyImg {
+  height: 200px;
+  transform: scale(-1, 1);
+}
+
+#vs {
+  color: red;
+  font-size: 70px;
+}
+
+#imgArea {
+  margin-top: 10%;
+}
+
+#friendHP {
+  background-color: chartreuse;
+  margin-right: 100px;
+}
+
+#enemyHP {
+  background-color: chartreuse;
+  margin-left: 100px;
+}
