@@ -1,8 +1,18 @@
 #root {
   max-width: 1280px;
+  height: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
 }
 
 .logo {
@@ -54,4 +64,12 @@
 #vs {
   color: red;
   font-size: 50px;
+}
+
+#base {
+  width: 550px;
+  height: 90%;
+  border: 2px solid #000;
+  margin-top: 5%;
+  background-image: url(src/img/023yado4.jpg);
 }
