@@ -41,7 +41,7 @@ BATTLE 画面の**リセット**で画面と FRIENDS 画面の収集履歴を初
 
 <img width="200" alt="battle1_2" src="ReadmeImg/Battle1.png">
 
- <img width="200" alt="friend2" src="ReadmeImg/friend2.png">
+ <img width="200" alt="friend2" src="ReadmeImg/Friends2.png">
 
 ## 未完成
 
