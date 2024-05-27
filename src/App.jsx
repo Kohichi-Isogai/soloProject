@@ -16,6 +16,7 @@ function App() {
   const [battleLog, setBattleLog] = useState([]);
   const [page, setPage] = useState("home");
   const [imgView, setImgView] = useState(false);
+  const [count, setCount] = useState(0);
 
   // useEffect(() => {
   //   document.getElementById("battleButton").disabled = true;
@@ -61,10 +62,12 @@ function App() {
             // setFriend(friend);
           } else {
             courseOfTheBattle.push("勝利！！！");
+            courseOfTheBattle.push(`${count}連勝目！`);
             isInBattle = false;
           }
         } else {
           courseOfTheBattle.push("敗北...");
+          courseOfTheBattle.push(`結果 : ${count}連勝！`);
           isInBattle = false;
           setDisabled(true);
         }
@@ -87,17 +90,16 @@ function App() {
               setDisabled={setDisabled}
               setEnemy={setEnemy}
               initEnemy={initEnemy}
+              setCount={setCount}
             ></Gacha>
-            <br />
+            {/* <br /> */}
             <Battle
               setEnemy={setEnemy}
               disabled={disabled}
-              setDisabled={setDisabled}
+              setCount={setCount}
             ></Battle>
           </div>
-          {/* <div id="battleLogBox1"> */}
           <BattleLog battleLog={battleLog}></BattleLog>
-          {/* </div> */}
         </div>
       ) : (
         <Friend setImgView={setImgView}></Friend>

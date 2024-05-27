@@ -1,5 +1,6 @@
 const Gacha = (props) => {
-  const { disabled, setFriend, setDisabled, setEnemy, initEnemy } = props;
+  const { disabled, setFriend, setDisabled, setEnemy, initEnemy, setCount } =
+    props;
   return (
     <button
       onClick={async () => {
@@ -12,6 +13,7 @@ const Gacha = (props) => {
         setDisabled(false);
         document.getElementById("friendHP").style.backgroundColor =
           "chartreuse";
+        setCount(0);
       }}
       disabled={disabled}
     >

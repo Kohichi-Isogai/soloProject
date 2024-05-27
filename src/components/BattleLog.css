@@ -4,10 +4,11 @@
   border: 1px solid #000;
   overflow-y: scroll;
   /* text-align: center; */
-  margin: auto auto 5%;
-  background-color: white;
+  margin: 2% auto 5%;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .logText {
   text-align: left;
+  color: black;
 }

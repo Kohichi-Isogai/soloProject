@@ -1,5 +1,7 @@
+import "./Battle.css";
+
 const Battle = (props) => {
-  const { setEnemy, disabled } = props;
+  const { setEnemy, disabled, setCount } = props;
 
   return (
     <button
@@ -17,7 +19,7 @@ const Battle = (props) => {
             ? "src/img/cave.jpg"
             : "src/img/castle.jpg";
         document.getElementById("base").style.backgroundImage = `url("${url}")`;
-
+        setCount((count) => count + 1);
         console.log("in");
       }}
       disabled={disabled}
