@@ -13,9 +13,9 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "makeMigration": "knex migrate:make",
-    "latestMigration": "knex migrate:latest",
+    "latestMigration": "knex migrate:latest --knexfile knexfile.js",
     "makeSeed": "knex seed:make",
-    "runSeed": "knex seed:run",
+    "runSeed": "knex seed:run  --knexfile knexfile.js",
     "server": "nodemon server.js"
   },
   "dependencies": {

@@ -27,8 +27,6 @@ module.exports = {
     client: "postgresql",
     connection: {
       database: process.env.DATABASE_URL,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
     },
     migrations: {
       directory: "db/migrations",
