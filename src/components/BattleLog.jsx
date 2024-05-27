@@ -2,7 +2,6 @@ import "./BattleLog.css";
 
 const BattleLog = (props) => {
   const { battleLog } = props;
-  console.log("log : ", battleLog);
   return (
     <div id="battleLogBox">
       <ol>

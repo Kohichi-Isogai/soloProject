@@ -17,7 +17,15 @@ function App() {
   const [page, setPage] = useState("home");
   const [imgView, setImgView] = useState(false);
   const [count, setCount] = useState(0);
-
+  const [myFriends, setMyFriends] = useState([]);
+  const getFriends = async () => {
+    const friend = await fetch("/api/friends", {
+      method: "GET",
+    });
+    const friendData = await friend.json();
+    setMyFriends(friendData);
+    console.log(myFriends);
+  };
   // useEffect(() => {
   //   document.getElementById("battleButton").disabled = true;
   // }, []);
@@ -30,9 +38,11 @@ function App() {
     } else if (page === "battle") {
       url = "src/img/grasslands.jpg";
       setImgView(true);
-    } else {
+    } else if (page === "friend") {
       url = "src/img/lodgingsHouse.jpg";
       setImgView(false);
+
+      getFriends();
     }
     document.getElementById("base").style.backgroundImage = `url("${url}")`;
   }, [page]);
@@ -67,7 +77,7 @@ function App() {
           }
         } else {
           courseOfTheBattle.push("敗北...");
-          courseOfTheBattle.push(`結果 : ${count}連勝！`);
+          courseOfTheBattle.push(`結果 : ${count - 1}連勝！`);
           isInBattle = false;
           setDisabled(true);
         }
@@ -92,7 +102,6 @@ function App() {
               initEnemy={initEnemy}
               setCount={setCount}
             ></Gacha>
-            {/* <br /> */}
             <Battle
               setEnemy={setEnemy}
               disabled={disabled}
@@ -102,7 +111,11 @@ function App() {
           <BattleLog battleLog={battleLog}></BattleLog>
         </div>
       ) : (
-        <Friend setImgView={setImgView}></Friend>
+        <Friend
+          setImgView={setImgView}
+          myFriends={myFriends}
+          setMyFriends={setMyFriends}
+        ></Friend>
       )}
       <TabBar setPage={setPage}></TabBar>
     </div>
