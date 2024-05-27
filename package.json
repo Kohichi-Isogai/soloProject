@@ -6,7 +6,7 @@
   "version": "0.0.0",
   "homepage": "./",
   "scripts": {
-    "build": "npm install",
+    "build": "npm install && npm run latestMigration && npm run runSeed",
     "start": "node server.js",
     "dev": "vite",
     "viteBuild": "vite build",
