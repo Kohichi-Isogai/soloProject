@@ -8,7 +8,7 @@ require("dotenv").config();
 const knexConfig = require("./knexfile");
 const knex = require("knex");
 const environment = process.env.DATABASE_URL ? "production" : "development";
-// knex(knexConfig[environment]);
+knex(knexConfig[environment]);
 
 module.exports = knex(knexConfig[environment]);
 
