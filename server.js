@@ -1,8 +1,15 @@
 const express = require("express");
 const app = express();
 
-const config = require("./knexfile");
-const knex = require("knex")(config);
+// const config = require("./knexfile");
+// const knex = require("knex")(config);
+
+const knexConfig = require("./knexfile");
+const knex = require("knex");
+const environment = process.env.DATABASE_URL ? "production" : "development";
+// knex(knexConfig[environment]);
+
+module.exports = knex(knexConfig[environment]);
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
