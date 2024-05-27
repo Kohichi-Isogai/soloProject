@@ -1,12 +1,7 @@
 // Update with your config settings.
-require("dotenv").config();
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
-console.log(process.env.DB_USER);
-console.log(process.env.DB_PASSWORD);
-console.log(process.env.DATABASE_URL);
-console.log(process.env.DB_NAME);
 module.exports = {
   development: {
     client: "postgresql",
