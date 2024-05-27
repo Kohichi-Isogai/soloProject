@@ -30,11 +30,9 @@ app.get("/api/battles", async (req, res) => {
 });
 
 app.get("/api/friends", async (req, res) => {
-  console.log("in111111");
   const result = await knex("my_friend")
     .join("friend", "friend.id", "=", "my_friend.id")
     .select();
-  console.log("in222222");
   res.status(200).send(JSON.stringify(result));
 });
 
