@@ -1,4 +1,5 @@
 const express = require("express");
+const PORT = process.env.PORT || 8000;
 const app = express();
 require("dotenv").config();
 
@@ -17,8 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use("/", express.static(__dirname + "/dist"));
 
-app.listen(8000, () => {
-  console.log("http://localhost:8000");
+app.listen(PORT, () => {
+  console.log(`http://localhost:${PORT}`);
 });
 
 app.get("/api/gacha", async (req, res) => {
