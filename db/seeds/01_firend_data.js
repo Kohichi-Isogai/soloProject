@@ -4,6 +4,7 @@
  */
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
+  await knex("my_friend").del();
   await knex("friend").del();
   await knex("friend").insert([
     {
