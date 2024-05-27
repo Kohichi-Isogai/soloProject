@@ -1,7 +1,7 @@
 const express = require("express");
 const PORT = process.env.PORT || 8000;
 const app = express();
-require("dotenv").config();
+// require("dotenv").config();
 
 // const config = require("./knexfile");
 // const knex = require("knex")(config);
