@@ -33,9 +33,6 @@ app.get("/api/friends", async (req, res) => {
 });
 
 app.post("/api/friends", async (req, res) => {
-  console.log(req.body);
-  console.log(typeof req.body.id);
-
   await knex("my_friend").insert({
     id: req.body.id,
     user: "user1",
@@ -46,3 +43,9 @@ app.post("/api/friends", async (req, res) => {
 });
 
 // { id: 1, user: "user1", max_battle: 0, friend_id: 1 },
+
+app.delete("/api/friends", async (req, res) => {
+  await knex("my_friend").del();
+
+  res.status(200).send();
+});

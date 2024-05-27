@@ -4,9 +4,12 @@
   "description": "",
   "main": "server.js",
   "version": "0.0.0",
+  "homepage": "./",
   "scripts": {
+    "build": "npm install",
+    "start": "node server.js",
     "dev": "vite",
-    "build": "vite build",
+    "viteBuild": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "makeMigration": "knex migrate:make",

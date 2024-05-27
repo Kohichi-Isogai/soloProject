@@ -20,11 +20,7 @@ const Gacha = (props) => {
         });
         const myFriendsData = await myFriends.json();
         const myFriendsId = myFriendsData.map((friend) => friend.friend_id);
-        console.log("myFriend", myFriendsId);
-        console.log("new friend", friendData.id);
-        console.log(myFriendsId.includes(friendData.id));
         if (!myFriendsId.includes(friendData.id)) {
-          console.log(friendData);
           await fetch("/api/friends", {
             method: "POST",
             headers: { "Content-Type": "application/json" },

@@ -24,11 +24,7 @@ function App() {
     });
     const friendData = await friend.json();
     setMyFriends(friendData);
-    console.log(myFriends);
   };
-  // useEffect(() => {
-  //   document.getElementById("battleButton").disabled = true;
-  // }, []);
 
   useEffect(() => {
     let url = "";
@@ -46,11 +42,6 @@ function App() {
     }
     document.getElementById("base").style.backgroundImage = `url("${url}")`;
   }, [page]);
-
-  // useEffect(() => {
-  //   console.log("friend : ", friend.id);
-  //   console.log("enemy : ", enemy.id);
-  // }, [friend]);
 
   useEffect(() => {
     const courseOfTheBattle = [];
@@ -89,7 +80,12 @@ function App() {
   return (
     <div id="base">
       {page === "home" ? (
-        <Home setImgView={setImgView}></Home>
+        <Home
+          setImgView={setImgView}
+          setFriend={setFriend}
+          setEnemy={setEnemy}
+          setDisabled={setDisabled}
+        ></Home>
       ) : page === "battle" ? (
         <div id="battle">
           <ImgArea friend={friend} enemy={enemy} imgView={imgView}></ImgArea>
@@ -109,6 +105,28 @@ function App() {
             ></Battle>
           </div>
           <BattleLog battleLog={battleLog}></BattleLog>
+          <button
+            id="reset"
+            onClick={async () => {
+              setFriend(initFriend);
+              setEnemy(initEnemy);
+
+              document.getElementById("friendHP").style.backgroundColor =
+                "chartreuse";
+
+              document.getElementById("enemyHP").style.backgroundColor =
+                "chartreuse";
+              document.getElementById(
+                "base"
+              ).style.backgroundImage = `url("src/img/grasslands.jpg")`;
+              await fetch("/api/friends", {
+                method: "DELETE",
+              });
+              setDisabled(true);
+            }}
+          >
+            リセット
+          </button>
         </div>
       ) : (
         <Friend

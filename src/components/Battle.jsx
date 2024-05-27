@@ -20,7 +20,6 @@ const Battle = (props) => {
             : "src/img/castle.jpg";
         document.getElementById("base").style.backgroundImage = `url("${url}")`;
         setCount((count) => count + 1);
-        console.log("in");
       }}
       disabled={disabled}
     >
