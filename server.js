@@ -53,9 +53,9 @@ const setupServer = () => {
 };
 
 const PORT = process.env.PORT || 8000;
-const server = setupServer();
-server.listen(PORT, () => {
+const app = setupServer();
+const server = app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}`);
 });
 
-module.exports = { setupServer };
+module.exports = { setupServer, server };
